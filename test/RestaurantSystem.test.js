@@ -2,7 +2,7 @@ const Item = require("../src/Item");
 const Menu = require("../src/Menu");
 const Restaurant = require("../src/Restaurant");
 
-//Restaurant
+//Restaurant-test
 describe("basic Restaurant test", () => {
   test("Item has name, imgUrl and city", () => {
     //Arrange
@@ -24,7 +24,7 @@ describe("basic Restaurant test", () => {
   });
 });
 
-//Menu
+//Menu-test
 describe("basic Menu test", () => {
   test("Item has Title and Icon & items ", () => {
     //Arrange
@@ -39,7 +39,7 @@ describe("basic Menu test", () => {
   });
 });
 
-//Item
+//Item-test
 describe("basic item test", () => {
   test("Item has name and price", () => {
     //Arrange
