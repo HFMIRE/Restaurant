@@ -1,10 +1,10 @@
-const Item = require("../src/Item");
 const Menu = require("../src/Menu");
 const Restaurant = require("../src/Restaurant");
+const Item = require("../src/Item");
 
 //Restaurant-test
 describe("basic Restaurant test", () => {
-  test("Item has name, imgUrl and city", () => {
+  test("Restaurant has foodie, imgUrl and city", () => {
     //Arrange
     const foodie = new Restaurant("Foodie", "pasta.jpg", "london");
     const main = new Menu("Main", "🍝");
@@ -21,31 +21,7 @@ describe("basic Restaurant test", () => {
     expect(main.items).toEqual([pasta]);
     expect(main.title).toEqual("Main");
     expect(main.icon).toEqual("🍝");
-  });
-});
-
-//Menu-test
-describe("basic Menu test", () => {
-  test("Item has Title and Icon & items ", () => {
-    //Arrange
-    const main = new Menu("Main", "🍝");
-    const pasta = new Item("Spaghetti", 8);
-    // Act
-    main.listItem(pasta);
-    //Assert
-    expect(main.items).toEqual([pasta]);
-    expect(main.title).toEqual("Main");
-    expect(main.icon).toEqual("🍝");
-  });
-});
-
-//Item-test
-describe("basic item test", () => {
-  test("Item has name and price", () => {
-    //Arrange
-    const pasta = new Item("Spaghetti", 8);
-    // Act
-    //Assert
+    // this items
     expect(pasta.name).toEqual("Spaghetti");
     expect(pasta.price).toEqual(8);
   });

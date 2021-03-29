@@ -1,5 +1,3 @@
-const Item = require("../src/Item");
-
 class Menu {
   constructor(title, icon) {
     this.title = title;

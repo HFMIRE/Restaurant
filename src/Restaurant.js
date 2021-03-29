@@ -1,4 +1,3 @@
-const Menu = require("../src/Menu");
 class Restaurant {
   constructor(name, imgUrl, city) {
     this.name = name;
