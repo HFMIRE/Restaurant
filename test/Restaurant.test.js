@@ -4,19 +4,19 @@ const Item = require("../src/Item");
 
 //Restaurant-test
 describe("basic Restaurant test", () => {
-  test("Restaurant has foodie, imgUrl and city", () => {
+  test("Restaurant has KFC, imgUrl and city and check the link between menu and item", () => {
     //Arrange
-    const foodie = new Restaurant("Foodie", "pasta.jpg", "london");
+    const kfc = new Restaurant("KFC", "pasta.jpg", "london");
     const main = new Menu("Main", "🍝");
     const pasta = new Item("Spaghetti", 8);
     // Act
-    foodie.listMenu(main);
+    kfc.listMenu(main);
     main.listItem(pasta);
     //Assert
-    expect(foodie.menus).toEqual([main]);
-    expect(foodie.name).toEqual("Foodie");
-    expect(foodie.imgUrl).toEqual("pasta.jpg");
-    expect(foodie.city).toEqual("london");
+    expect(kfc.menus).toEqual([main]);
+    expect(kfc.name).toEqual("KFC");
+    expect(kfc.imgUrl).toEqual("pasta.jpg");
+    expect(kfc.city).toEqual("london");
     // this connection between the list and menu
     expect(main.items).toEqual([pasta]);
     expect(main.title).toEqual("Main");
